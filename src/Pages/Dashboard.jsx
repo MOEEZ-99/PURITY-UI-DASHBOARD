@@ -34,7 +34,9 @@ import line from "../assets/line.png"
 export const Dashboard = () => {
   return (
     <>
+      <div className='px-4'>
       <Topbar pageName="Dashboard" />
+      </div>
       <div className="main flex flex-col gap-8 w-full h-full">
         <div className='flex gap-3 xl:flex-nowrap flex-wrap w-full'>
           <DashboardBox title={"Today's Money"} amount={"53,000"} result={"+55%"} img={box1} />
@@ -115,7 +117,7 @@ export const Dashboard = () => {
               </h4>
             </div>
 
-            <div className='h-full w-full'>
+            <div className='w-full h-[400px] md:h-[85%]'>
               <SimpleLineChart />
             </div>
           </div>
@@ -129,7 +131,7 @@ export const Dashboard = () => {
 
         <div className="projects grid grid-cols-1 gap-8 2xl:grid-cols-6 w-full">
 
-        {/**One */}  <div className='w-full py-6 px-4 rounded-3xl flex flex-col gap-6 2xl:col-span-4 col-span-1'>
+        {/**One */}  <div className='w-full py-6 px-4 rounded-3xl flex flex-col gap-6 2xl:col-span-4 col-span-1 bg-white'>
 
             <div className="title flex justify-between">
               <div>

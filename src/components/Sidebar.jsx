@@ -18,8 +18,8 @@ export const Sidebar = () => {
     const {showMenu, setShowMenu} = useContext(MenuContext)
     return (
         <>
-        <div className={`absolute bg-neutral-300 ${showMenu? "opacity-[0.7] z-30" : "opacity-0"} transition-all duration-300 ease-in-out h-screen w-screen overflow-hidden`} onClick={()=>{setShowMenu(false)}}></div>
-        <div className={`bg-[#F8F9FA] box-border p-3 absolute xl:static min-h-screen z-30 ${showMenu? "left-[0]": "left-[-100%]"} transition-all duration-300 ease-in-out`}>
+        <div className={`absolute bg-neutral-300 ${showMenu? "opacity-[0.7] z-30" : "opacity-0 z-[-20]"} transition-all duration-300 ease-in-out h-screen w-screen overflow-hidden`} onClick={()=>{setShowMenu(false)}}></div>
+        <div className={`bg-[#F8F9FA] box-border p-3 absolute xl:static min-h-[100dvh] z-30 ${showMenu? "left-[0]": "left-[-100%]"} transition-all duration-300 ease-in-out`}>
 
             <div className='logo flex items-center gap-3 justify-center pb-8 pt-4'>
                 <img src={logo} alt="" className='cursor-pointer'/>
@@ -30,25 +30,33 @@ export const Sidebar = () => {
 
           <div className='pt-8 pb-3'>
             <ul className='flex flex-col'>
-                <li onClick={()=>{navigate("/")}} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
+                <li onClick={()=>{navigate("/")
+                    setShowMenu(false)
+                }} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
                 <div className='bg-white p-3 rounded-3xl'>
                 <img src={home} alt="" />
                 </div>
                 Dashboard</li>
 
-                <li onClick={()=>{navigate("/tables")}} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/tables"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
+                <li onClick={()=>{navigate("/tables")
+                    setShowMenu(false)
+                }} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/tables"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
                 <div className='bg-white p-3 rounded-3xl'>
                 <img src={table} alt="" />
                 </div>
                 Tables</li>
 
-                <li onClick={()=>{navigate("/billing")}} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/billing"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
+                <li onClick={()=>{navigate("/billing")
+                    setShowMenu(false)
+                }} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/billing"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
                 <div className='bg-white p-3 rounded-3xl'>
                 <img src={billing} alt="" />
                 </div>
                 Billings</li>
 
-                <li onClick={()=>{navigate("/rtl")}} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/rtl"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
+                <li onClick={()=>{navigate("/rtl")
+                    setShowMenu(false)
+                }} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/rtl"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
                 <div className='bg-white p-3 rounded-3xl'>
                 <img src={rtl} alt="" />
                 </div>
@@ -61,21 +69,27 @@ export const Sidebar = () => {
 
           <div className='pt-3'>
             <ul className='flex flex-col'>
-                <li onClick={()=>{navigate("/profile")}} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/profile"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
+                <li onClick={()=>{navigate("/profile")
+                    setShowMenu(false)
+                }} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/profile"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
                 <div className='bg-white p-3 rounded-3xl'>
                 <img src={profile} alt="" />
                 </div>
                 Profile
                 </li>
 
-                <li onClick={()=>{navigate("/sign-in")}} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/sign-in"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
+                <li onClick={()=>{navigate("/sign-in")
+                    setShowMenu(false)
+                }} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/sign-in"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
                 <div className='bg-white p-3 rounded-3xl'>
                 <img src={signIn} alt="" />
                 </div>
                 Sign In
                 </li>
 
-                <li onClick={()=>{navigate("/sign-up")}} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/sign-up"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
+                <li onClick={()=>{navigate("/sign-up")
+                    setShowMenu(false)
+                }} className={`flex items-center gap-3 p-3 rounded-xl cursor-pointer ${location.pathname==="/sign-up"? "bg-neutral-200 font-semibold":"text-[#A0AEC0]"}`}>
                 <div className='bg-white p-3 rounded-3xl'>
                 <img src={signUp} alt="" />
                 </div>

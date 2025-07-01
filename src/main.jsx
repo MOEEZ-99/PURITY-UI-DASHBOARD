@@ -35,13 +35,13 @@ createRoot(document.getElementById('root')).render(
           <Route index element={<Profile />} />
       </Route>
 
-      <Route path='/sign-in' element={<App />}>
-          <Route index element={<Signin />} />
-      </Route>
+      <Route path='/sign-in' element={<Signin />} />
+          {/* <Route index element={<Signin />} /> */}
+      {/* </Route> */}
 
-      <Route path='/sign-up' element={<App />}>
-          <Route index element={<Signup />} />
-      </Route>
+      <Route path='/sign-up' element={<Signup />} />
+          {/* <Route index element={<Signup />} /> */}
+      {/* </Route> */}
     </Routes>
     </BrowserRouter>
   </StrictMode>,
