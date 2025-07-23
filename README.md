@@ -1,8 +1,11 @@
-# Admin Dashboard Temaplte 
+# 🧩 Admin Dashboard Template
 
-A fully responsive admin dashboard template made with React and Tailwind css.
+A **modern, fully responsive admin dashboard** built with **React** and **Tailwind CSS**. Designed for speed, scalability, and clean UI.
 
-## Figma Design: https://www.figma.com/community/file/1020707462188017225
+- 💻 **Tech Stack**: React.js, Tailwind CSS  
 
+## 🎨 Figma Design  
+[View on Figma](https://www.figma.com/community/file/1020707462188017225)
 
-## Preview : https://pr-dashboard-template.netlify.app/
+## 🔗 Live Preview  
+[https://pr-dashboard-template.netlify.app/](https://pr-dashboard-template.netlify.app/)
